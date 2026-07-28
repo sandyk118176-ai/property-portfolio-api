@@ -1,5 +1,6 @@
 package com.vkara.property_portfolio_api.service;
 
+import com.vkara.property_portfolio_api.exception.ResourceNotFoundException;
 import com.vkara.property_portfolio_api.model.Property;
 import com.vkara.property_portfolio_api.repository.PropertyRepository;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class PropertyService {
 
     public Property getPropertyById(Long id) {
         return propertyRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Property not found with id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Property not found with id: " + id));
     }
 
     public Property createProperty(Property property) {

@@ -1,5 +1,6 @@
 package com.vkara.property_portfolio_api.service;
 
+import com.vkara.property_portfolio_api.exception.ResourceNotFoundException;
 import com.vkara.property_portfolio_api.model.Tenant;
 import com.vkara.property_portfolio_api.model.Unit;
 import com.vkara.property_portfolio_api.repository.TenantRepository;
@@ -23,7 +24,7 @@ public class TenantService {
 
     public Tenant getTenantById(Long id) {
         return tenantRepository.findById(id)
-                 .orElseThrow(() -> new RuntimeException("Tenant not found with id: " + id));
+                 .orElseThrow(() -> new ResourceNotFoundException("Tenant not found with id: " + id));
     }
 
     public Tenant createTenant(Long unitId, Tenant tenant) {

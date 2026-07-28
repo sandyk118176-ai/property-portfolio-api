@@ -1,5 +1,6 @@
 package com.vkara.property_portfolio_api.service;
 
+import com.vkara.property_portfolio_api.exception.ResourceNotFoundException;
 import com.vkara.property_portfolio_api.model.Property;
 import com.vkara.property_portfolio_api.model.Unit;
 import com.vkara.property_portfolio_api.repository.UnitRepository;
@@ -24,7 +25,7 @@ public class UnitService {
 
     public Unit getUnitById(Long id) {
         return unitRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Unit not found with id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Unit not found with id: " + id));
     }
 
     public Unit createUnit(Long propertyId, Unit unit) {
