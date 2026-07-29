@@ -1,6 +1,7 @@
 # Property Portfolio Tracker API
 
 A REST API for managing rental property portfolios — properties, units, and tenants — built with Spring Boot, Spring Data JPA, and H2.
+Frontend: [property-portfolio-frontend](https://github.com/sandyk118176-ai/property-portfolio-frontend) (React + TypeScript)
 
 ## Overview
 
