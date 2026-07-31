@@ -33,7 +33,7 @@ public class UnitController {
 
     @PutMapping("/units/{id}")
     public Unit updateUnit(@PathVariable Long id, @RequestBody Unit unit) {
-        return unitService.createUnit(id, unit);
+        return unitService.updateUnit(id, unit);
     }
 
     @DeleteMapping("/units/{id}")
