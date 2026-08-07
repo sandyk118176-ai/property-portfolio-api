@@ -3,6 +3,9 @@
 A REST API for managing rental property portfolios — properties, units, and tenants — built with Spring Boot, Spring Data JPA, and H2.
 Frontend: [property-portfolio-frontend](https://github.com/sandyk118176-ai/property-portfolio-frontend) (React + TypeScript)
 
+**Live demo:** https://property-portfolio-frontend.vercel.app
+**API base URL:** https://property-portfolio-api.onrender.com
+
 ## Overview
 
 This API models a simple property management workflow: a landlord owns multiple **properties**, each property has multiple **units**, and each unit can have one **tenant**. The API enforces real business rules — for example, a unit is automatically marked as occupied when a tenant moves in, and vacant again when they move out.
